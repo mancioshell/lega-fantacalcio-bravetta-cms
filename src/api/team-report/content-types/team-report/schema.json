@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_reports",
+  "info": {
+    "singularName": "team-report",
+    "pluralName": "team-reports",
+    "displayName": "TeamReport",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "team": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::team.team"
+    },
+    "vote": {
+      "type": "decimal",
+      "required": true
+    },
+    "report": {
+      "type": "richtext",
+      "required": true
+    },
+    "picture": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

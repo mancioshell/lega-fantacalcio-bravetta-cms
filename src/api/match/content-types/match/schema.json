@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "matches",
+  "info": {
+    "singularName": "match",
+    "pluralName": "matches",
+    "displayName": "Match"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "home_team_report": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::team-report.team-report"
+    },
+    "guest_team_report": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::team-report.team-report"
+    }
+  }
+}
