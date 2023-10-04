@@ -4,7 +4,7 @@
   "info": {
     "singularName": "report-card",
     "pluralName": "report-cards",
-    "displayName": "ReportCard",
+    "displayName": "Report",
     "description": ""
   },
   "options": {
@@ -70,9 +70,15 @@
       "target": "api::team.team"
     },
     "matches": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::match.match"
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "report.matches",
+      "required": true
     }
   }
 }

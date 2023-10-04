@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_match_matches",
+  "info": {
+    "displayName": "match",
+    "icon": "calendar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "home_report": {
+      "type": "component",
+      "repeatable": false,
+      "component": "report.report",
+      "required": true
+    },
+    "guest_report": {
+      "type": "component",
+      "repeatable": false,
+      "component": "report.report",
+      "required": true
+    }
+  }
+}

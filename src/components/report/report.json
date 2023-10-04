@@ -1,28 +1,23 @@
 {
-  "kind": "collectionType",
-  "collectionName": "team_reports",
+  "collectionName": "components_team_report_reports",
   "info": {
-    "singularName": "team-report",
-    "pluralName": "team-reports",
     "displayName": "TeamReport",
+    "icon": "file",
     "description": ""
   },
-  "options": {
-    "draftAndPublish": true
-  },
-  "pluginOptions": {},
+  "options": {},
   "attributes": {
     "team": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::team.team"
     },
-    "vote": {
-      "type": "decimal",
-      "required": true
-    },
     "report": {
       "type": "richtext",
+      "required": true
+    },
+    "vote": {
+      "type": "decimal",
       "required": true
     },
     "picture": {
@@ -35,10 +30,6 @@
         "videos",
         "audios"
       ]
-    },
-    "name": {
-      "type": "string",
-      "required": true
     }
   }
 }
