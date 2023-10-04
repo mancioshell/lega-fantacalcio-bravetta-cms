@@ -740,6 +740,7 @@ export interface ApiReportCardReportCard extends Schema.CollectionType {
       }> &
       Attribute.SetMinMax<{
         min: 4;
+        max: 4;
       }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

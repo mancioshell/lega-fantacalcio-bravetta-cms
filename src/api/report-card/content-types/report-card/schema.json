@@ -79,7 +79,8 @@
       },
       "component": "report.matches",
       "required": true,
-      "min": 4
+      "min": 4,
+      "max": 4
     }
   }
 }
