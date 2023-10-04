@@ -737,6 +737,9 @@ export interface ApiReportCardReportCard extends Schema.CollectionType {
         i18n: {
           localized: true;
         };
+      }> &
+      Attribute.SetMinMax<{
+        min: 4;
       }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

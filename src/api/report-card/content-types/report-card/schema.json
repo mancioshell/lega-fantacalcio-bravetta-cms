@@ -78,7 +78,8 @@
         }
       },
       "component": "report.matches",
-      "required": true
+      "required": true,
+      "min": 4
     }
   }
 }
