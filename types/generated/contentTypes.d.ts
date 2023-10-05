@@ -716,6 +716,7 @@ export interface ApiReportCardReportCard extends Schema.CollectionType {
         };
       }>;
     report_picture: Attribute.Media &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
