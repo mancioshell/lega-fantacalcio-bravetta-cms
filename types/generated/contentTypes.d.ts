@@ -722,16 +722,6 @@ export interface ApiReportCardReportCard extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    top_team: Attribute.Relation<
-      'api::report-card.report-card',
-      'oneToOne',
-      'api::team.team'
-    >;
-    flop_team: Attribute.Relation<
-      'api::report-card.report-card',
-      'oneToOne',
-      'api::team.team'
-    >;
     matches: Attribute.Component<'report.matches', true> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
@@ -742,6 +732,20 @@ export interface ApiReportCardReportCard extends Schema.CollectionType {
       Attribute.SetMinMax<{
         min: 4;
         max: 4;
+      }>;
+    top_team: Attribute.Component<'report.top-flop'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    flop_team: Attribute.Component<'report.top-flop'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
       }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_report_top_flops",
+  "info": {
+    "displayName": "TopFlop",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "team": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::team.team"
+    },
+    "picture": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

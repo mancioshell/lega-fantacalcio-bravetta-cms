@@ -56,16 +56,6 @@
         }
       }
     },
-    "top_team": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::team.team"
-    },
-    "flop_team": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::team.team"
-    },
     "matches": {
       "type": "component",
       "repeatable": true,
@@ -78,6 +68,28 @@
       "required": true,
       "min": 4,
       "max": 4
+    },
+    "top_team": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "report.top-flop",
+      "required": true
+    },
+    "flop_team": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "report.top-flop",
+      "required": true
     }
   }
 }

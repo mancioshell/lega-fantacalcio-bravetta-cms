@@ -24,7 +24,18 @@ export interface ReportReport extends Schema.Component {
     team: Attribute.Relation<'report.report', 'oneToOne', 'api::team.team'>;
     report: Attribute.RichText & Attribute.Required;
     vote: Attribute.Decimal & Attribute.Required;
-    picture: Attribute.Media;
+  };
+}
+
+export interface ReportTopFlop extends Schema.Component {
+  collectionName: 'components_report_top_flops';
+  info: {
+    displayName: 'TopFlop';
+    icon: 'book';
+  };
+  attributes: {
+    team: Attribute.Relation<'report.top-flop', 'oneToOne', 'api::team.team'>;
+    picture: Attribute.Media & Attribute.Required;
   };
 }
 
@@ -33,6 +44,7 @@ declare module '@strapi/types' {
     export interface Components {
       'report.matches': ReportMatches;
       'report.report': ReportReport;
+      'report.top-flop': ReportTopFlop;
     }
   }
 }
