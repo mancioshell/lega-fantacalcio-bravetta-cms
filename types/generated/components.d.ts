@@ -24,6 +24,7 @@ export interface ReportReport extends Schema.Component {
     team: Attribute.Relation<'report.report', 'oneToOne', 'api::team.team'>;
     report: Attribute.RichText & Attribute.Required;
     vote: Attribute.Decimal & Attribute.Required;
+    score: Attribute.Integer & Attribute.Required;
   };
 }
 
